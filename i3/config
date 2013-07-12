@@ -15,7 +15,7 @@ exec_always --no-startup-id synclient TouchPadOff=1
 exec nm-applet
 exec gnome-sound-applet
 
-# Bring up monitor 2 
+# Toggle external display
 bindsym $mod+Shift+M exec --no-startup-id toggle-displayport.sh
 
 # start a terminal
