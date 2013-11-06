@@ -2,6 +2,11 @@ set $mod Mod1
 
 workspace_auto_back_and_forth yes
 
+# Thinkpad volume control
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 4%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 4%- unmute
+bindsym XF86AudioMute exec amixer -q set Headphone toggle && amixer -q set Master unmute
+
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
@@ -15,7 +20,7 @@ exec_always --no-startup-id synclient TouchPadOff=1
 exec nm-applet
 exec gnome-sound-applet
 
-# Toggle external display
+# Bring up monitor 2
 bindsym $mod+Shift+M exec --no-startup-id toggle-displayport.sh
 
 # start a terminal
@@ -143,7 +148,7 @@ bar {
 # Bind Super-[9-0] keys to launch programs
 bindsym Mod4+1 exec chromium-browser
 #bindsym Mod4+2 exec i3-sensible-terminal -e vim
-#bindsym Mod4+3 exec pidgin 
+#bindsym Mod4+3 exec pidgin
 #bindsym Mod4+4 exec thunderbird
 #bindsym Mod4+5 exec vlc
 #bindsym Mod4+6 exec gedit
